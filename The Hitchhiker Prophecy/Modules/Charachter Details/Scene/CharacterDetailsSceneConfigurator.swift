@@ -5,7 +5,7 @@
 //  Created by Mohamed Tarek on 6/15/20.
 //  Copyright (c) 2020 SWVL. All rights reserved.
 //
-//  We are one more configurator colser to Egypt's First Unicorn 🦄
+//  We are one more configurator closer to Egypt's First Unicorn 🦄
 //
 
 import UIKit

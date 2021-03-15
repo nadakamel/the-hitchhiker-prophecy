@@ -5,7 +5,7 @@
 //  Created by Mohamed Tarek on 6/15/20.
 //  Copyright (c) 2020 SWVL. All rights reserved.
 //
-//  Just remember presenters takes models and produces viewmodels
+//  Just remember presenters take models and produce view-models
 //
 
 final class CharacterDetailsScenePresenter {

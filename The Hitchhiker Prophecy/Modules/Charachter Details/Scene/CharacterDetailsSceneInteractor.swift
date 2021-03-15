@@ -5,7 +5,7 @@
 //  Created by Mohamed Tarek on 6/15/20.
 //  Copyright (c) 2020 SWVL. All rights reserved.
 //
-//  Looks like you're cooking something intersting 🚀
+//  Looks like you're cooking something interesting 🚀
 //
 
 final class CharacterDetailsSceneInteractor: CharacterDetailsSceneDataStore {

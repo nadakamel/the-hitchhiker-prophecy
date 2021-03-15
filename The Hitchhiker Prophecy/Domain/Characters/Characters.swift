@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Characters.swift
 //  The Hitchhiker Prophecy
 //
 //  Created by Mohamed Matloub on 6/10/20.
