@@ -27,9 +27,9 @@ class HomeSceneDataSource: NSObject, UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: HomeSceneCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSceneCollectionViewCell.identifier,
-                                                                                   for: indexPath) as! HomeSceneCollectionViewCell
-        cell.configCell(character: characters[indexPath.item])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSceneCollectionViewCell.identifier,
+                                                      for: indexPath) as! HomeSceneCollectionViewCell
+        cell.character = characters[indexPath.item]
         return cell
     }
     
@@ -39,27 +39,15 @@ class HomeSceneDataSource: NSObject, UICollectionViewDelegate, UICollectionViewD
 }
 
 extension HomeSceneDataSource: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if viewState == .horizontal {
-            return CGSize(width: collectionView.frame.width - 50.0, height: UIScreen.main.bounds.height - 200)
-        } else {
-            return CGSize(width: collectionView.frame.width - 50.0, height: 200)
+        var width = collectionView.frame.width - 50.0
+        var height: CGFloat = 480
+        if viewState == .vertical {
+            width = collectionView.frame.width - 10.0
+            height = 170
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return CGSize(width: width, height: height)
     }
 }

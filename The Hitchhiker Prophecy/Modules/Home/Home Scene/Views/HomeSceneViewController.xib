@@ -10,15 +10,35 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeSceneViewController" customModule="The_Hitchhiker_Prophecy" customModuleProvider="target">
             <connections>
+                <outlet property="charactersCollectionView" destination="VdE-ge-e84" id="41e-I2-Pn0"/>
+                <outlet property="collectionViewFlowLayout" destination="ThV-MU-zNE" id="XRh-b6-w5a"/>
                 <outlet property="view" destination="WGk-3c-KKJ" id="Olq-EN-8do"/>
             </connections>
         </placeholder>
         <view contentMode="scaleToFill" id="WGk-3c-KKJ">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VdE-ge-e84">
+                    <rect key="frame" x="16" y="64" width="382" height="778"/>
+                    <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ThV-MU-zNE">
+                        <size key="itemSize" width="200" height="600"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="p9K-a1-ut4"/>
-            <color key="backgroundColor" red="0.12156862745098039" green="0.1291826069" blue="0.14117836950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-            <point key="canvasLocation" x="187" y="145"/>
+            <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="VdE-ge-e84" firstAttribute="top" secondItem="p9K-a1-ut4" secondAttribute="top" constant="20" id="PB8-bM-FQZ"/>
+                <constraint firstItem="p9K-a1-ut4" firstAttribute="bottom" secondItem="VdE-ge-e84" secondAttribute="bottom" constant="20" id="SKz-NS-3gt"/>
+                <constraint firstItem="VdE-ge-e84" firstAttribute="leading" secondItem="p9K-a1-ut4" secondAttribute="leading" constant="16" id="TPu-TO-A2K"/>
+                <constraint firstItem="p9K-a1-ut4" firstAttribute="trailing" secondItem="VdE-ge-e84" secondAttribute="trailing" constant="16" id="Ueb-SL-tQF"/>
+            </constraints>
+            <point key="canvasLocation" x="186.95652173913044" y="144.64285714285714"/>
         </view>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>
