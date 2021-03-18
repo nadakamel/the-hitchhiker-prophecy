@@ -23,9 +23,8 @@ class HomeSceneInteractor: HomeSceneDataStore {
 
 extension HomeSceneInteractor: HomeSceneBusinessLogic {
     func fetchCharacters() {
-        
         let ts = "1"
-        let hash = "" // TODO: Implement
+        let hash = "\(ts)\(NetworkConstants.privateKey)\(NetworkConstants.publicKey)".md5
         let limit = HomeScene.Search.Constants.searchPageLimit
         let offset = result?.offset ?? 0
         let input = Characters.Search.Input(timeStamp: ts, apiKey: NetworkConstants.publicKey, hash: hash, offset: offset, limit: limit, orderBy: .modifiedDateDescending)
@@ -39,7 +38,7 @@ extension HomeSceneInteractor: HomeSceneBusinessLogic {
                 newData.data.results = oldCharacters
                 self?.result = newData.data
             case .failure(let error):
-                print(error)
+                print("\(error) error in fetchCharacters")
             }
             self?.presenter.presentCharacters(result)
         }
