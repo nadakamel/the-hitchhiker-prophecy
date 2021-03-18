@@ -13,6 +13,7 @@ enum AppWindowManager {
         let window = self.window ?? UIWindow.init(frame: windowFrame)
         let controller = HomeSceneConfigurator.configure()
         window.rootViewController = controller
+        self.window = window
         window.makeKeyAndVisible()
     }
 }
