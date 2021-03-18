@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol HomeSceneDataSourceDelegate: class {
+    func didSelectCharacter(withIndex index: Int)
+}
+
 class HomeSceneDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var characters: [HomeScene.Search.ViewModel]
     var viewState: LayoutState
 
+    weak var delegate: HomeSceneDataSourceDelegate?
+    
     init(characters: [HomeScene.Search.ViewModel], viewState: LayoutState) {
         self.characters = characters
         self.viewState = viewState
@@ -35,6 +41,7 @@ class HomeSceneDataSource: NSObject, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("\(characters[indexPath.item].name) Selected")
+        delegate?.didSelectCharacter(withIndex: indexPath.item)
     }
 }
 

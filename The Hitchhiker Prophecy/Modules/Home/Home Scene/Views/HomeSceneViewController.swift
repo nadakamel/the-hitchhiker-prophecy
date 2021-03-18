@@ -64,6 +64,7 @@ class HomeSceneViewController: UIViewController {
 extension HomeSceneViewController: HomeSceneDisplayView {
     func didFetchCharacters(viewModel: [HomeScene.Search.ViewModel]) {
         collectionViewDataSource = HomeSceneDataSource(characters: viewModel, viewState: viewState)
+        collectionViewDataSource?.delegate = self
         charactersCollectionView.delegate = collectionViewDataSource
         charactersCollectionView.dataSource = collectionViewDataSource
         charactersCollectionView.reloadData()
@@ -71,5 +72,11 @@ extension HomeSceneViewController: HomeSceneDisplayView {
     
     func failedToFetchCharacters(error: Error) {
         print(error.localizedDescription)
+    }
+}
+
+extension HomeSceneViewController: HomeSceneDataSourceDelegate {
+    func didSelectCharacter(withIndex index: Int) {
+        router?.routeToCharacterDetailsWithCharacter(at: index)
     }
 }
