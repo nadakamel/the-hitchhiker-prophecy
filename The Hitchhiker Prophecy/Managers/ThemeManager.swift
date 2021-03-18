@@ -9,6 +9,8 @@
 import UIKit
 
 enum ThemeManager {
+    static let backgroundColor = UIColor(red: 31.0/255.0, green: 33.0/255.0, blue: 36.0/255.0, alpha: 1)
+    
     static func configure() {
         // MARK: - UIApperance
         configureNavigationBarAppearance()
