@@ -6,3 +6,26 @@ In The horizontal card view, cards should be peeking from the side to alert the 
 Also this scene should have a button that switches the card like design to a list of all the superheroes.
 
 If a superhero cell is tapped we should then navigate to a details scene that showcases the superhero's description.
+
+## Getting Started
+
+### Prerequisites
+This project uses cocoapods for dependencies management. If you don't have cocoapods installed in your machine, or are using older version of cocoapods, you can install it in terminal by running command ```sudo gem install cocoapods```. For more information go to https://cocoapods.org/
+
+### Installation
+
+1. Clone this repository to your machine in Xcode or using your machine's Terminal whatever you prefer.\
+`git clone https://github.com/nadakamel/the-hitchhiker-prophecy.git`
+
+2. Download CocoaPods on your machine if you don't already have it\
+`sudo gem install cocoapods`
+
+3. Install third-party libraries using `pod`\
+`pod install`
+
+### Usage
+Open  ```The Hitchhiker Prophecy.xcworkspace``` and run the project.
+
+## Architecture
+
+Clean Swift (VIP) architecture
