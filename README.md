@@ -29,3 +29,6 @@ Open  ```The Hitchhiker Prophecy.xcworkspace``` and run the project.
 ## Architecture
 
 Clean Swift (VIP) architecture
+
+## Screenshots
+<img src="https://github.com/nadakamel/the-hitchhiker-prophecy/blob/main/Screenshots/Screen-1.png" width="300" height="650"> <img src="https://github.com/nadakamel/the-hitchhiker-prophecy/blob/main/Screenshots/Screen-2.png" width="300" height="650"> <img src="https://github.com/nadakamel/the-hitchhiker-prophecy/blob/main/Screenshots/Screen-3.png" width="300" height="650">
